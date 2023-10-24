@@ -17,11 +17,12 @@ export default function Router() {
 
         <Route path="/" element={<Navigate to="/dashboard/home" replace />} />
 
-        <Route path="/dashboard/*" element={<Main />}>
+        <Route path="/dashboard" element={<Main />}>
           <Route path="home" element={<Home />} />
           <Route path="tables" element={<Tables />} />
           <Route path="billing" element={<Billing />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="*" element={<Navigate to="/dashboard/home" replace />} />
         </Route>
       </Routes>
     </BrowserRouter>
