@@ -1,32 +1,15 @@
-/*!
-  =========================================================
-  * Muse Ant Design Dashboard - v1.0.0
-  =========================================================
-  * Product Page: https://www.creative-tim.com/product/muse-ant-design-dashboard
-  * Copyright 2021 Creative Tim (https://www.creative-tim.com)
-  * Licensed under MIT (https://github.com/creativetimofficial/muse-ant-design-dashboard/blob/main/LICENSE.md)
-  * Coded by Creative Tim
-  =========================================================
-  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
-// import { useState } from "react";
-import { Menu, Button } from "antd";
-import { NavLink, useLocation } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+
+import { Menu, Button } from 'antd';
+import { NavLink, useLocation } from 'react-router-dom';
+import logo from '../../assets/images/logo.png';
 
 function Sidenav({ color }) {
   const { pathname } = useLocation();
-  const page = pathname.replace("/dashboard/", "");
+  const page = pathname.replace('/dashboard/', '');
 
   const dashboard = [
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-      key={0}
-    >
+    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" key={0}>
       <path
         d="M3 4C3 3.44772 3.44772 3 4 3H16C16.5523 3 17 3.44772 17 4V6C17 6.55228 16.5523 7 16 7H4C3.44772 7 3 6.55228 3 6V4Z"
         fill={color}
@@ -43,14 +26,7 @@ function Sidenav({ color }) {
   ];
 
   const tables = [
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      key={0}
-    >
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" key={0}>
       <path
         d="M9 2C8.44772 2 8 2.44772 8 3C8 3.55228 8.44772 4 9 4H11C11.5523 4 12 3.55228 12 3C12 2.44772 11.5523 2 11 2H9Z"
         fill={color}
@@ -65,18 +41,8 @@ function Sidenav({ color }) {
   ];
 
   const billing = [
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      key={0}
-    >
-      <path
-        d="M4 4C2.89543 4 2 4.89543 2 6V7H18V6C18 4.89543 17.1046 4 16 4H4Z"
-        fill={color}
-      ></path>
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" key={0}>
+      <path d="M4 4C2.89543 4 2 4.89543 2 6V7H18V6C18 4.89543 17.1046 4 16 4H4Z" fill={color}></path>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -87,14 +53,7 @@ function Sidenav({ color }) {
   ];
 
   const rtl = [
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      key={0}
-    >
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" key={0}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -105,14 +64,7 @@ function Sidenav({ color }) {
   ];
 
   const profile = [
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      key={0}
-    >
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" key={0}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -123,14 +75,7 @@ function Sidenav({ color }) {
   ];
 
   const signin = [
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      key={0}
-    >
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" key={0}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -141,22 +86,13 @@ function Sidenav({ color }) {
   ];
 
   const signup = [
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      key={0}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" key={0}>
       <path
         d="M0,2A2,2,0,0,1,2,0H8a2,2,0,0,1,2,2V8a2,2,0,0,1-2,2H2A2,2,0,0,1,0,8Z"
         transform="translate(4 4)"
         fill={color}
       />
-      <path
-        d="M2,0A2,2,0,0,0,0,2V8a2,2,0,0,0,2,2V4A2,2,0,0,1,4,2h6A2,2,0,0,0,8,0Z"
-        fill={color}
-      />
+      <path d="M2,0A2,2,0,0,0,0,2V8a2,2,0,0,0,2,2V4A2,2,0,0,1,4,2h6A2,2,0,0,0,8,0Z" fill={color} />
     </svg>,
   ];
 
@@ -164,7 +100,7 @@ function Sidenav({ color }) {
     <>
       <div className="brand">
         <img src={logo} alt="" />
-        <span>Muse Dashboard</span>
+        <span>Dashboard</span>
       </div>
       <hr />
       <Menu theme="light" mode="inline">
@@ -173,7 +109,7 @@ function Sidenav({ color }) {
             <span
               className="icon"
               style={{
-                background: page === "home" ? color : "",
+                background: page === 'home' ? color : '',
               }}
             >
               {dashboard}
@@ -186,7 +122,7 @@ function Sidenav({ color }) {
             <span
               className="icon"
               style={{
-                background: page === "tables" ? color : "",
+                background: page === 'tables' ? color : '',
               }}
             >
               {tables}
@@ -199,7 +135,7 @@ function Sidenav({ color }) {
             <span
               className="icon"
               style={{
-                background: page === "billing" ? color : "",
+                background: page === 'billing' ? color : '',
               }}
             >
               {billing}
@@ -212,7 +148,7 @@ function Sidenav({ color }) {
             <span
               className="icon"
               style={{
-                background: page === "rtl" ? color : "",
+                background: page === 'rtl' ? color : '',
               }}
             >
               {rtl}
@@ -228,7 +164,7 @@ function Sidenav({ color }) {
             <span
               className="icon"
               style={{
-                background: page === "profile" ? color : "",
+                background: page === 'profile' ? color : '',
               }}
             >
               {profile}
@@ -249,23 +185,6 @@ function Sidenav({ color }) {
           </NavLink>
         </Menu.Item>
       </Menu>
-      <div className="aside-footer">
-        <div
-          className="footer-box"
-          style={{
-            background: color,
-          }}
-        >
-          <span className="icon" style={{ color }}>
-            {dashboard}
-          </span>
-          <h6>Need Help?</h6>
-          <p>Please check our docs</p>
-          <Button type="primary" className="ant-btn-sm ant-btn-block">
-            DOCUMENTATION
-          </Button>
-        </div>
-      </div>
     </>
   );
 }

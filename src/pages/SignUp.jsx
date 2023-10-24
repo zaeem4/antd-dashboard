@@ -126,7 +126,7 @@ export default class SignUp extends Component {
     return (
       <>
         <div className="layout-default ant-layout layout-sign-up">
-          <Header>
+          {/* <Header>
             <div className="header-col header-brand">
               <h5>Muse Dashboard</h5>
             </div>
@@ -161,7 +161,7 @@ export default class SignUp extends Component {
             <div className="header-col header-btn">
               <Button type="false">FREE DOWNLOAD</Button>
             </div>
-          </Header>
+          </Header> */}
 
           <Content className="p-0">
             <div className="sign-up-header">
@@ -250,7 +250,7 @@ export default class SignUp extends Component {
               </p>
             </Card>
           </Content>
-          <Footer>
+          {/* <Footer>
             <Menu mode="horizontal">
               <Menu.Item>Company</Menu.Item>
               <Menu.Item>About Us</Menu.Item>
@@ -289,7 +289,7 @@ export default class SignUp extends Component {
               {" "}
               Copyright © 2021 Muse by <a href="#pablo">Creative Tim</a>.{" "}
             </p>
-          </Footer>
+          </Footer> */}
         </div>
       </>
     );

@@ -9,40 +9,18 @@
 =========================================================
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import {
-  Layout,
-  Menu,
-  Button,
-  Row,
-  Col,
-  Typography,
-  Form,
-  Input,
-  Switch,
-} from "antd";
-import signinbg from "../assets/images/img-signin.jpg";
-import {
-  DribbbleOutlined,
-  TwitterOutlined,
-  InstagramOutlined,
-  GithubOutlined,
-} from "@ant-design/icons";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Layout, Menu, Button, Row, Col, Typography, Form, Input, Switch } from 'antd';
+import signinbg from '../assets/images/img-signin.jpg';
+import { DribbbleOutlined, TwitterOutlined, InstagramOutlined, GithubOutlined } from '@ant-design/icons';
 function onChange(checked) {
   console.log(`switch to ${checked}`);
 }
 const { Title } = Typography;
 const { Header, Footer, Content } = Layout;
 const template = [
-  <svg
-    data-v-4ebdc598=""
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg data-v-4ebdc598="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       data-v-4ebdc598=""
       d="M3 4C3 3.44772 3.44772 3 4 3H16C16.5523 3 17 3.44772 17 4V6C17 6.55228 16.5523 7 16 7H4C3.44772 7 3 6.55228 3 6V4Z"
@@ -64,14 +42,7 @@ const template = [
   </svg>,
 ];
 const profile = [
-  <svg
-    data-v-4ebdc598=""
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg data-v-4ebdc598="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       data-v-4ebdc598=""
       fillRule="evenodd"
@@ -83,14 +54,7 @@ const profile = [
   </svg>,
 ];
 const signup = [
-  <svg
-    data-v-4ebdc598=""
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg data-v-4ebdc598="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       data-v-4ebdc598=""
       fillRule="evenodd"
@@ -102,12 +66,7 @@ const signup = [
   </svg>,
 ];
 const signin = [
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="14"
-    height="14"
-    viewBox="0 0 14 14"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
     <path
       className="fill-muted"
       d="M12.25,14H1.75A1.752,1.752,0,0,1,0,12.25V3.5A1.752,1.752,0,0,1,1.75,1.75h.876V.875a.875.875,0,0,1,1.75,0V1.75h5.25V.875a.875.875,0,0,1,1.75,0V1.75h.875A1.752,1.752,0,0,1,14,3.5v8.75A1.752,1.752,0,0,1,12.25,14ZM3.5,4.375a.875.875,0,0,0,0,1.75h7a.875.875,0,0,0,0-1.75Z"
@@ -117,16 +76,16 @@ const signin = [
 export default class SignIn extends Component {
   render() {
     const onFinish = (values) => {
-      console.log("Success:", values);
+      console.log('Success:', values);
     };
 
     const onFinishFailed = (errorInfo) => {
-      console.log("Failed:", errorInfo);
+      console.log('Failed:', errorInfo);
     };
     return (
       <>
         <Layout className="layout-default layout-signin">
-          <Header>
+          {/* <Header>
             <div className="header-col header-brand">
               <h5>Muse Dashboard</h5>
             </div>
@@ -161,24 +120,15 @@ export default class SignIn extends Component {
             <div className="header-col header-btn">
               <Button type="primary">FREE DOWNLOAD</Button>
             </div>
-          </Header>
+          </Header> */}
           <Content className="signin">
             <Row gutter={[24, 0]} justify="space-around">
-              <Col
-                xs={{ span: 24, offset: 0 }}
-                lg={{ span: 6, offset: 2 }}
-                md={{ span: 12 }}
-              >
+              <Col xs={{ span: 24, offset: 0 }} lg={{ span: 6, offset: 2 }} md={{ span: 12 }}>
                 <Title className="mb-15">Sign In</Title>
                 <Title className="font-regular text-muted" level={5}>
                   Enter your email and password to sign in
                 </Title>
-                <Form
-                  onFinish={onFinish}
-                  onFinishFailed={onFinishFailed}
-                  layout="vertical"
-                  className="row-col"
-                >
+                <Form onFinish={onFinish} onFinishFailed={onFinishFailed} layout="vertical" className="row-col">
                   <Form.Item
                     className="username"
                     label="Email"
@@ -186,7 +136,7 @@ export default class SignIn extends Component {
                     rules={[
                       {
                         required: true,
-                        message: "Please input your email!",
+                        message: 'Please input your email!',
                       },
                     ]}
                   >
@@ -200,51 +150,37 @@ export default class SignIn extends Component {
                     rules={[
                       {
                         required: true,
-                        message: "Please input your password!",
+                        message: 'Please input your password!',
                       },
                     ]}
                   >
                     <Input placeholder="Password" />
                   </Form.Item>
 
-                  <Form.Item
-                    name="remember"
-                    className="aligin-center"
-                    valuePropName="checked"
-                  >
+                  <Form.Item name="remember" className="aligin-center" valuePropName="checked">
                     <Switch defaultChecked onChange={onChange} />
                     Remember me
                   </Form.Item>
 
                   <Form.Item>
-                    <Button
-                      type="primary"
-                      htmlType="submit"
-                      style={{ width: "100%" }}
-                    >
+                    <Button type="primary" htmlType="submit" style={{ width: '100%' }}>
                       SIGN IN
                     </Button>
                   </Form.Item>
                   <p className="font-semibold text-muted">
-                    Don't have an account?{" "}
+                    Don't have an account?{' '}
                     <Link to="/sign-up" className="text-dark font-bold">
                       Sign Up
                     </Link>
                   </p>
                 </Form>
               </Col>
-              <Col
-                className="sign-img"
-                style={{ padding: 12 }}
-                xs={{ span: 24 }}
-                lg={{ span: 12 }}
-                md={{ span: 12 }}
-              >
+              <Col className="sign-img" style={{ padding: 12 }} xs={{ span: 24 }} lg={{ span: 12 }} md={{ span: 12 }}>
                 <img src={signinbg} alt="" />
               </Col>
             </Row>
           </Content>
-          <Footer>
+          {/* <Footer>
             <Menu mode="horizontal">
               <Menu.Item>Company</Menu.Item>
               <Menu.Item>About Us</Menu.Item>
@@ -283,7 +219,7 @@ export default class SignIn extends Component {
               {" "}
               Copyright © 2021 Muse by <a href="#pablo">Creative Tim</a>.{" "}
             </p>
-          </Footer>
+          </Footer> */}
         </Layout>
       </>
     );
